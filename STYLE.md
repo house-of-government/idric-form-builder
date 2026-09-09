@@ -13,14 +13,14 @@ canonical guide here.
 ## Keep the form domain above adapters
 
 The form builder's top-level vocabulary is the information a person or
-institution means to collect: domain schema, cardinality, interaction,
-validation, and the resulting typed record.
+institution means to collect: domain schema, allowed number of values,
+interaction, validation, and the resulting typed record.
 
 Networking, HTTP, sockets, file formats, databases, Android/framework plumbing,
 and serialization belong below or outside that form-domain layer. Do not let a
 transport or storage representation redefine the form semantics.
 
-## Preserve semantic types and cardinality
+## Preserve semantic types and value-count restrictions
 
 Represent facts such as `Email_Address`, `Person_Name`, `one_or_more`, and
 `zero_or_one` structurally. Do not encode plural values into delimiter strings
