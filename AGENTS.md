@@ -15,3 +15,9 @@ Work on a branch. Preserve the separation between form semantics and transport,
 storage, renderer, or platform adapters. Inspect neighboring work before
 inventing a new local pattern, and run the checks relevant to the files changed
 before proposing a merge.
+
+Whenever giving the human a script or command block, assume `$PWD` is arbitrary.
+Resolve repository and file paths from the script's own location, an explicit
+project location, or a discovered repository root, and perform any required
+`cd` inside the script. Never require the human to `cd` first or rely on relative
+paths against their current working directory.
